@@ -17,8 +17,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 class MainActivity : AppCompatActivity() {
 
-    val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-    val navController = navHostFragment.navController
+    val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment?
+    val navController = navHostFragment?.navController
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        binding.bottomNavigationView.setupWithNavController(navController)
+        if (navController != null) {
+            binding.bottomNavigationView.setupWithNavController(navController)
+        }
 
 
     binding.navHostFragment.findNavController().addOnDestinationChangedListener{ _, destination, _ ->
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         R.id.statisticsFragment,R.id.profitFragment ->binding.bottomNavigationView.visibility= View.VISIBLE
         else -> binding.bottomNavigationView.visibility= View.GONE
     }
-    }
+                                                                                                                                                                                                                                                                                                                      }
     }
     }
 

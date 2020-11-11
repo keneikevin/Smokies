@@ -16,6 +16,7 @@ class ProfitFragment : Fragment(R.layout.fragment_profit) {
     private val viewModel: MainViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
 }
