@@ -5,4 +5,5 @@
     <string name="main"></string>
     <string name="profit"></string>
     <string name="statistics"></string>
+    <string name="todo">TODO</string>
 </resources>
