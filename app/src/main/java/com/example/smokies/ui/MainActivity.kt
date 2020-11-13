@@ -23,17 +23,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
 
 
-        setupActionBarWithNavController(navController,appBarConfiguration)
-        binding.navHostFragment.findNavController()
-                .addOnDestinationChangedListener { _, destination, _ ->
+
+
+
+        binding.bottomNavigationView.setupWithNavController(navController=navController)
+       navController.addOnDestinationChangedListener { _, destination, _ ->
                     when(destination.id) {
-                        R.id.statisticsFragment,R.id.mainFragment -> binding.bottomNavigationView.visibility=View.VISIBLE
-                        else -> binding.bottomNavigationView.visibility= View.GONE
+                        R.id.statisticsFragment,R.id.profitFragment -> binding.bottomNavigationView.visibility=View.VISIBLE
+                        else  -> binding.bottomNavigationView.visibility= View.GONE
                     }
                 }
 
