@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="@+id/bans"
         app:layout_constraintTop_toBottomOf="@+id/bans" />
 
-
+        // input types
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/etSmokies"
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toEndOf="@+id/bans" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/etspent    "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -86,18 +86,6 @@
         app:layout_constraintStart_toEndOf="@+id/spent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/profit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="Profit"
-        android:textSize="36sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/amount"
-        app:layout_constraintEnd_toStartOf="@+id/amount"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,6 +93,7 @@
         android:layout_marginEnd="32dp"
         android:text="amount"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber4" />
 
@@ -119,5 +108,17 @@
         android:layout_gravity="end|bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

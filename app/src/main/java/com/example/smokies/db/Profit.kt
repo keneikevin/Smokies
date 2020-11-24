@@ -8,7 +8,6 @@ data class Profit(
     var money:Float =0F,
     var profit:Float=0F,
 
-    var timestamp:Long = 0L,
 ) {
     @PrimaryKey(autoGenerate = true)
     var id:Int? = null

@@ -32,13 +32,13 @@
         android:layout_height="wrap_content"
         android:text="Total Time"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalCaloriesInfo"
-        app:layout_constraintEnd_toEndOf="@+id/tvTotalTime"
+        app:layout_constraintEnd_toEndOf="@+id/tvDay"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalTime"
+        app:layout_constraintStart_toStartOf="@+id/tvDay"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tvTotalTime"
+        android:id="@+id/tvDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/profit"
