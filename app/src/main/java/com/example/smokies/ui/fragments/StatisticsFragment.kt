@@ -14,5 +14,9 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
     private val viewModel: StatisticsViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        subscrbeToObservers()
+    }
+    private fun subscrbeToObservers(){
+
     }
 }
